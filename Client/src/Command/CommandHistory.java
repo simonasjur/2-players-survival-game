@@ -1,0 +1,20 @@
+package Command;
+ 
+import java.util.Stack;
+ 
+public class CommandHistory {
+ 
+    private Stack<Command> history = new Stack<>();
+ 
+    public void push(Command c) {
+        history.push(c);
+    }
+ 
+    public Command pop() {
+    	if (history.size() > 0)
+    		return history.pop();
+    	return null;
+    }
+ 
+    public boolean isEmpty() { return history.isEmpty(); }
+}
